@@ -1,0 +1,28 @@
+<%- include('header') -%>
+ <h1>Budgtr ALL</h1>
+<table>
+      <tr>
+    <th>Date</th>
+    <th>Name</th>
+    <th>From</th>
+    <th>Amount</th>
+    <th>Tags</th>
+
+
+  </tr>
+
+  <% for(let i = 0; i < Budget.length; i++){  %>
+<tr>
+    <td><%=Budget[i].date%></td> 
+     <td><a href="/budgets/<%=i%>"><%=Budget[i].name%></a></td> 
+     <td><%=Budget[i].from%></td> 
+     <td><%=Budget[i].amount%></td> 
+     <td><%=Budget[i].tags %></td> 
+  </tr>
+  <% } %>
+  
+</table> 
+
+
+
+<%- include('footer') -%>
