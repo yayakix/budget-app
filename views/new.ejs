@@ -1,0 +1,21 @@
+<%- include('header') -%>
+
+<div class="container">
+<h1>New Budget</h1>
+<form action="/budgets" method="post">
+<input type="date" name="date" id="">
+<br>
+<input type="text" name="name"placeholder="Name">
+<br>
+<input type="number" name="amount" id="" placeholder="Amount">
+<br>
+<input type="text" name="from" placeholder="From">
+<br>
+<input type="text" name="tags" placeholder="Tags">
+<br>
+<input type="submit" value="New Budget">
+
+</form>
+</div>
+
+<%- include('footer') -%>
