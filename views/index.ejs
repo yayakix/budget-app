@@ -1,9 +1,27 @@
 <%- include('header') -%>
+    <title>Budgtr</title>
+            <style>
+        <% console.log(typeof bankAccount) %>
+        <% console.log(bankAccount)%>
+                <% if (bankAccount > 0){%>
+                     body{ 
+                background-color: #B3E8E5};
+         <% } else{ %>
+           body{ 
+                background-color: #FFA8A8 }
+         <% } %>
+        </style>
 
+</head>
+<body>
+    <!-- new header -->
 <br>
      <div class="container">
+        
+
+        Bank Account: <%= bankAccount %>
          <br>
-         <a href="/new"><button>Make New Entry</button></a>
+         <a href="/budgets/new"><button>Make New Entry</button></a>
 
 <h1>Budgtr ALL</h1>
 <table>
@@ -13,8 +31,6 @@
     <th>From</th>
     <th>Amount</th>
     <th>Tags</th>
-
-
   </tr>
 
   <% for(let i = 0; i < Budget.length; i++){  %>
